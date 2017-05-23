@@ -29,6 +29,10 @@ public class LoginWindow extends JFrame {
 	 * Create the frame.
 	 */
 	public LoginWindow() {
+		createWindow();
+	}
+	
+	private void createWindow() {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (ClassNotFoundException | InstantiationException
@@ -53,7 +57,7 @@ public class LoginWindow extends JFrame {
 		txtAddress = new JTextField();
 		txtAddress.setEditable(false);
 		txtAddress.setEnabled(false);
-		txtAddress.setText("127.0.0.1");
+		txtAddress.setText("localhost");
 		txtAddress.setBounds(168, 177, 158, 20);
 		contentPane.add(txtAddress);
 		txtAddress.setColumns(10);
@@ -84,7 +88,7 @@ public class LoginWindow extends JFrame {
 				authenticate(name, address, port);
 			}
 		});
-		btnLogin.setBounds(202, 262, 89, 23);
+		btnLogin.setBounds(202, 256, 89, 29);
 		contentPane.add(btnLogin);
 		
 		txtPort = new JTextField();
